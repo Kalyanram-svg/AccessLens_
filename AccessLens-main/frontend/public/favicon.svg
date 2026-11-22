@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="shieldGrad" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <linearGradient id="coreGrad" x1="20" y1="18" x2="44" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="glow" x="12" y="10" width="40" height="44" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer Shield Frame -->
+  <path d="M32 4L12 11V28C12 42 21 53.5 32 60C43 53.5 52 42 52 28V11L32 4Z" fill="url(#shieldGrad)" stroke="#10b981" stroke-width="2"/>
+  
+  <!-- Inner Circuit / Shield Body -->
+  <path d="M32 10L17 15.5V28.5C17 39.5 23.5 48.5 32 54C40.5 48.5 47 39.5 47 28.5V15.5L32 10Z" fill="#022c22" fill-opacity="0.85" stroke="#34d399" stroke-width="1.5" stroke-dasharray="3 2"/>
+
+  <!-- AI Nexus Node Core -->
+  <g filter="url(#glow)">
+    <!-- Central Diamond Node -->
+    <path d="M32 20L39 27L32 34L25 27Z" fill="url(#coreGrad)"/>
+    <!-- Guard Pillar / Key Core -->
+    <circle cx="32" cy="27" r="3" fill="#ffffff"/>
+    <path d="M32 34V44M28 39H36M29 44H35" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Pulse nodes -->
+  <circle cx="21" cy="24" r="1.75" fill="#6ee7b7"/>
+  <circle cx="43" cy="24" r="1.75" fill="#6ee7b7"/>
+  <line x1="22.5" y1="24.5" x2="26" y2="26" stroke="#6ee7b7" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="41.5" y1="24.5" x2="38" y2="26" stroke="#6ee7b7" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
